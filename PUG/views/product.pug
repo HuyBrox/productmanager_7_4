@@ -1,0 +1,9 @@
+html
+    head
+        title= title
+    body
+    block main
+        p= productData
+        ul
+        each item in productData
+            li #{item.title} - #{item.price}

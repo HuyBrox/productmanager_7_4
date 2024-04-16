@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contaienr">
+        <div class="devtest"></div>
+    </div>
+</body>
+<script>
+    //đơng ainr đây chỉ là truyền vào tham số mặc định
+    function tong(a = 0, b = 0) {
+        //hoặc có thể viết:
+        // a = a|| a = 0;
+        // b = b || b = 0;
+        return a + b;
+    }
+    console.log(tong(2, 3));
+    console.log(tong(4));
+</script>
+
+</html>

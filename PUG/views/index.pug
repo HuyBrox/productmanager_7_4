@@ -1,0 +1,39 @@
+html
+  head
+    title= title
+    link(rel="stylesheet" href="/css/style.css")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css")
+  body
+    h1= message
+    button(class="btn btn-primary") Click me!
+
+    - var fullName = "Ngô Ngọc Huy"
+    - var email = "huytrangno1@gmail.com"
+    div(class = "infouser")
+      p= fullName
+      p= email
+      //- cách dưới dùng hay hơn đa dụng hơn
+    div(class = "infouser")
+      p Full name: #{fullName}
+      p Email: #{email}
+      //- đây là cách get thẻ html
+    - var link = "<a href='https://www.facebook.com/'>link</a>"
+    p !{link}
+
+      //-Khai báo object
+    -
+      var infouser={
+        name: "Ngô Ngọc Huy",
+        email: "huytrangno1@gmail.com"
+      }
+    p Họ tên: #{infouser.name}
+    p Email: #{infouser.email}
+
+    if(infouser.phone)
+      p Họ tên: #{infouser.phone}
+    else
+      p Phone: Chưa có!
+
+    img(src="./image/no6273n057-node-js-logo-nodejs-transparent-logo-google-search.png" alt="")
+    script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js")
